@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        section {
+            background-color: #d6d6d6;
+            padding: 15px;
+        }
+        .title h2 {
+            margin-top: 0;
+        }
+        p {
+            color: #8b8b8b;
+            font-size: 12px;
+        }
+        .content_left {
+            /* width: 40%; */
+        }
+        .content_right {
+            /* width: 60%; */
+        }
+        .content_left_img {
+            height: 250px;
+            background-color: #5790e4;
+            border-radius: 5px;
+        }
+        .item {
+            border-bottom: 1px dashed red;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+        }
+        .item:last-child {
+            border: none;
+        }
+        .item_left {
+            /* width: 20%; */
+        }
+        .item_right {
+            /* width: 80%; */
+        }
+        .item_img {
+            background-color: #ca5dd4;
+            color: #fff;
+            text-align: center;
+            display: block;
+            font-size: 56px;
+            border-radius: 4px;
+        }
+        .item_right h3 {
+            font-size: 16px;
+        }
+
+
+
+        /* Layout */
+        
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .row::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .col {
+            float: left;
+            padding: 0 15px;
+        }
+        .col-20 {
+            width: 20%;
+        }
+        .col-40 {
+            width: 40%;
+        }
+        .col-60 {
+            width: 60%;
+        }
+        .col-80 {
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="title">
+            <h2>Issue & Plans</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+            Veritatis, magni nobis aspernatur facere, voluptatibus.</p>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col col-40">
+                    <div class="content_left">
+                        <div class="content_left_img">
+                            <!-- <img src="" alt=""> -->
+                        </div>
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                        <div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-60">
+                    <div class="content_right">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col col-20">
+                                    <div class="item_left">
+                                        <span class="item_img">H</span>
+                                    </div>
+                                </div>
+                                <div class="col col-80">
+                                    <div class="item_right">
+                                        <h3>CLIMATE CHANGE</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, veritatis neque dicta maiores autem tempore? Deserunt aliquam ipsa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col col-20">
+                                    <div class="item_left">
+                                        <span class="item_img">H</span>
+                                    </div>
+                                </div>
+                                <div class="col col-80">
+                                    <div class="item_right">
+                                        <h3>COMPREHENSIVE IMMIGRATION REFORM</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, veritatis neque dicta maiores autem tempore? Deserunt aliquam ipsa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col col-20">
+                                    <div class="item_left">
+                                        <span class="item_img">H</span>
+                                    </div>
+                                </div>
+                                <div class="col col-80">
+                                    <div class="item_right">
+                                        <h3>ECONOMIC OPPORTUNITY</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, veritatis neque dicta maiores autem tempore? Deserunt aliquam ipsa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col col-20">
+                                    <div class="item_left">
+                                        <span class="item_img">H</span>
+                                    </div>
+                                </div>
+                                <div class="col col-80">
+                                    <div class="item_right">
+                                        <h3>HEALTH CARE</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, veritatis neque dicta maiores autem tempore? Deserunt aliquam ipsa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+</body>
+</html>
