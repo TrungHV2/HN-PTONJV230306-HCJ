@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* MENU DỌC */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu_doc li {
+            position: relative;
+        }
+        .menu_doc_con {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            min-width: 225px;
+            display: none;
+        }
+
+        .menu_doc li:hover > .menu_doc_con {
+            display: block;
+        }
+
+        .menu_doc li a {
+            text-decoration: none;
+            background-color: #06c;
+            display: block;
+            font-size: 24px;
+            border-bottom: 1px solid #fff;
+            padding: 10px;
+            color: #fff;
+        }
+        .menu_doc li a:hover {
+            background-color: rgb(1, 69, 138);
+        }
+        .menu_doc li:last-child a {
+            border: none;
+        }
+
+
+        /* MENU NGANG */
+        .menu_ngang::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .menu_ngang > li {
+            float: left;
+        }
+        .menu_ngang li {
+            position: relative;
+        }
+        .menu_ngang li:hover > .menu_ngang_con {
+            display: block;
+        }
+        .menu_ngang_con {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 225px;
+            display: none;
+        }
+        .menu_ngang_con .menu_ngang_con {
+            top: 0;
+            left: 100%;
+        }
+        .menu_ngang li a {
+            display: block;
+            background-color: #06c;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-right: 1px solid #fff;
+        }
+        .menu_ngang li:last-child a { 
+            border: none;
+        }
+        .menu_ngang .menu_ngang_con li a {
+            border: none;
+            border-bottom: 1px solid #fff;
+        }
+
+        .main_menu::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .main_menu > li {
+            float: left;
+        }
+        .main_menu li {
+            position: relative;
+        }
+        .main_menu li a {
+            text-decoration: none;
+            background-color: #232323;
+            color: #fff;
+            display: block;
+            padding: 10px 20px;
+            border-right: 1px solid #fff;
+        }
+        .sub_menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 250px;
+            /* display: none; */
+
+            visibility: hidden;
+            /* opacity: 0; */
+            transform: scale(1,0);
+            transform-origin: 0 0;
+            transition: all 0.5s;
+        }
+        /* Menu cấp 3...n */
+        .sub_menu .sub_menu {
+            top: 0;
+            left: 100%;
+        }
+        /* Khi di chuột vào ptử <li> thì ptử <ul> con sẽ...CSS */
+        .main_menu li:hover > .sub_menu {
+            /* display: block; */
+            
+            visibility: visible;
+            /* opacity: 1; */
+            transform: scale(1,1);
+        }
+        .sub_menu li a {
+            border: none;
+            border-bottom: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 600px;border: 1px solid #000;">
+        <h2>Menu dọc</h2>
+        <ul class="menu_doc">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li>
+                <a href="">Services</a>
+                <ul class="menu_doc_con">
+                    <li><a href="">Services 1</a></li>
+                    <li><a href="">Services 2</a>
+                        <ul class="menu_doc_con">
+                            <li><a href="">Services 2.1</a></li>
+                            <li><a href="">Services 2.2</a>
+                                <ul class="menu_doc_con">
+                                    <li><a href="">Services 2.2.1</a></li>
+                                    <li><a href="">Services 2.2.2</a></li>
+                                    <li><a href="">Services 2.3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Services 2.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Services 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Contact</a>
+                <ul class="menu_doc_con">
+                    <li><a href="">Contact 1</a></li>
+                    <li><a href="">Contact 2</a></li>
+                    <li><a href="">Contact 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h2>Menu ngang</h2>
+        <ul class="menu_ngang">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li>
+                <a href="">Services</a>
+                <ul class="menu_ngang_con">
+                    <li><a href="">Services 1</a></li>
+                    <li><a href="">Services 2</a>
+                        <ul class="menu_ngang_con">
+                            <li><a href="">Services 2.1</a></li>
+                            <li><a href="">Services 2.2</a>
+                                <ul class="menu_ngang_con">
+                                    <li><a href="">Services 2.2.1</a></li>
+                                    <li><a href="">Services 2.2.2</a></li>
+                                    <li><a href="">Services 2.3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Services 2.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Services 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Contact</a>
+                <ul class="menu_ngang_con">
+                    <li><a href="">Contact 1</a></li>
+                    <li><a href="">Contact 2</a></li>
+                    <li><a href="">Contact 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h2>Menu ngang</h2>
+        <ul class="main_menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li>
+                <a href="">Services</a>
+                <ul class="sub_menu">
+                    <li><a href="">Services 1</a></li>
+                    <li><a href="">Services 2</a>
+                        <ul class="sub_menu">
+                            <li><a href="">Services 2.1</a></li>
+                            <li><a href="">Services 2.2</a>
+                                <ul class="sub_menu">
+                                    <li><a href="">Services 2.2.1</a></li>
+                                    <li><a href="">Services 2.2.2</a></li>
+                                    <li><a href="">Services 2.3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Services 2.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Services 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Contact</a>
+                <ul class="sub_menu">
+                    <li><a href="">Contact 1</a></li>
+                    <li><a href="">Contact 2</a></li>
+                    <li><a href="">Contact 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
