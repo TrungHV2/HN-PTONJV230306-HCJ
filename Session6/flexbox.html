@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        .content {
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+        /* .b1 {height: 50px;}
+        .b2 {height: 100px;}
+        .b3 {height: 150px;}
+        .b4 {height: 200px;}
+        .b5 {height: 250px;} */
+        .row {
+            border: 1px solid red;
+            /* height: 1200px; */
+
+            display: flex;
+            flex-wrap: wrap;
+
+            /* justify-content: space-around; */
+            /* align-content: stretch; */
+            /* align-items: stretch; */
+            /* flex-direction: column-reverse; */
+        }
+        .col {
+            width: 33.333333%;
+            padding: 0 15px;
+
+            /* background-color: #06c; */
+            /* border: 1px solid #fff; */
+            /* margin-right: 0.1px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col">
+            <div class="content b1">
+                <h1>1</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content b2">
+                <h1>2</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content b3">
+                <h1>3</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content b4">
+                <h1>4</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content b5">
+                <h1>5</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content b4">
+                <h1>4</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content b5">
+                <h1>5</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="content b5">
+                <h1>5</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

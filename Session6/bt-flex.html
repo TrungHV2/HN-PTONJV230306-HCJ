@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        .container {
+            width: 992px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col {
+            width: 33.333333%;
+            padding: 0 15px;
+        }
+        .item {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+        }
+        h2{margin: 0;}
+        .item_title{
+            border-bottom: 1px solid #ccc;
+            background-color: #ddd;
+            padding: 7px;
+        }
+        .item_content {
+            padding: 15px;
+        }
+        .unit {
+            color: #ccc;
+        }
+        .btn {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+            border-radius: 3px;
+            display: block;
+            background-color: #2169f0;
+            border: 1px solid #2169f0;
+        }
+        .active {
+            background-color: transparent;
+            color: #2169f0;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="item">
+                        <div class="item_title">
+                            <h2>Free</h2>
+                        </div>
+                        <div class="item_content">
+                            <h3>
+                                <span class="money">$0</span>
+                                <span class="unit">/ mo</span>
+                            </h3>
+                            <p>10 users included</p>
+                            <p>2 GB of storage</p>
+                            <p>Email suport<br>Help center access</p>
+                            <a class="btn active" href="">Signup for free</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item">
+                        <div class="item_title">
+                            <h2>Free</h2>
+                        </div>
+                        <div class="item_content">
+                            <h3>
+                                <span class="money">$0</span>
+                                <span class="unit">/ mo</span>
+                            </h3>
+                            <p>10 users included</p>
+                            <p>2 GB of storage</p>
+                            <p>Email suport<br>Help center access</p>
+                            <a class="btn" href="">Signup for free</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item">
+                        <div class="item_title">
+                            <h2>Free</h2>
+                        </div>
+                        <div class="item_content">
+                            <h3>
+                                <span class="money">$0</span>
+                                <span class="unit">/ mo</span>
+                            </h3>
+                            <p>10 users included</p>
+                            <p>2 GB of storage</p>
+                            <p>Email suport<br>Help center access</p>
+                            <a class="btn" href="">Signup for free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

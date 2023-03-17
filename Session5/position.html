@@ -11,7 +11,6 @@
             width: 1000px;
             height: 1000px;
             border: 1px solid #000;
-            position: relative;
         }
         .wrap {
             width: 800px;
@@ -26,31 +25,30 @@
         .div1 {
             background-color: red;
             position: fixed;
-            top: 0;
+            bottom: 0;
             right: 0;
-            z-index: 1;
         }
         .div2 {
             background-color: green;
             position: relative;
-            top: 500px;
-            left: 500px;
+            top: 30px;
+            left: 50px;
+            z-index: 1;
         }
         .div3 {
             background-color: blue;
             position: absolute;
-            transform: translate(-50%,-50%);
-            top: 50%;
-            left: 50%;
-            z-index: 2;
+            right: 0px;
+            top: 0px;
         }
         .div4 {
             background-color: darkred;
             position: sticky;
             top: 10px;
+            z-index: 2;
         }
         .wrap {
-            /* position: static; */
+            position: static;
         }
     </style>
 </head>
