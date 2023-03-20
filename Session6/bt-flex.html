@@ -50,6 +50,34 @@
             background-color: transparent;
             color: #2169f0;
         }
+        /* Tương đương màn hình rộng 0 <= screen <= 768px */
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+            .col { 
+                width: 50%;
+            }
+        }
+        /* Tương đương màn hình rộng 0 <= screen <= 425px */
+        @media (max-width: 425px) {
+            /* Thì áp dụng CSS ở đây */
+            .container {
+                width: 100%;
+            }
+            .col { 
+                width: 100%;
+            }
+        }
+        @media (max-width: 320px) {
+            /* Thì áp dụng CSS ở đây */
+            /* .container {
+                width: 100%;
+            }
+            .col { 
+                width: 100%;
+            } */
+        }
     </style>
 </head>
 <body>
