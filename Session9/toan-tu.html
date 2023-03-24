@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p><b>Họ và tên: </b>Hoàng Văn Trung</p>
+    <p><b>Email: </b>trunghv.lsd@gmail.com</p>
+    <p><b>SĐT: </b>0962229893</p>
+    <p><b>Địa chỉ: </b>Bắc Giang</p> -->
+
+    <script>
+        var a = 5, b = 6, c = 7, d, e;
+        var hoDem = "Hoàng Văn", ten = "Trung";
+        //a++;
+        // d = a++ + b; => d = 11
+        d = ++a + b;
+        e = c % 2;
+        console.log("a = " + a);
+        console.log("d = " + d);
+        console.log("5" + e);
+        console.log("check = " + true)
+        console.log(hoDem + ten);
+
+        // document.writeln("document.write");
+        // document.writeln("document.write");
+        // Toán tử 3 ngồi
+        // <Biểu thức 1> ? <Biểu thức 2> : <Biểu thức 3>
+        var check5 = 5 % 2 == 0 ? "5 là số chẵn" : "5 là số lẻ";
+        console.log(check5);
+
+        var name = prompt("Họ tên");
+        var email = prompt("Email");
+        var phone = prompt("Số điện thoại");
+        var address = prompt("Địa chỉ");
+
+        document.write("<p><b>Họ và tên: </b>" + name + "</p>");
+        document.write(`
+        <p><b>Email: </b>${email}</p>
+        <p><b>SĐT: </b>${phone}</p>
+        <p><b>Địa chỉ: </b>${address}</p>
+        `);
+        var strA = prompt("Nhập số a");
+        strA = parseFloat(strA);
+        var b = parseInt(prompt("Nhập số a"));
+        var x = "240", y = 5;
+        console.log("a = " + a);
+        console.log("b = " + b);
+        console.log(eval(x + "+" + y));
+        /*
+        Nhập 2 số a, b từ bàn phím.
+        In kết quả của các phép tính trong màn hình console
+        a + b = ?
+        a - b = ?
+        a * b = ?
+        a / b = ?
+        */
+       a = 5, b = 6;
+       console.log(`${a} + ${b} = ${a + b}`); //=> 5 + 6 = 11
+    </script>
+</body>
+</html>
