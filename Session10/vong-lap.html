@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // In ra từ 1-10
+        // For
+        console.log("for");
+        for (var i = 1; i <= 10; i++) {
+            if (i == 3) 
+                continue;
+            console.log(i);
+        }
+        console.log("while");
+        i = 1;
+        while (i <= 10) {
+            console.log(i);
+            i+=2;
+        }
+        var coChemKhong = false;
+        do {
+            console.log("Chém");
+            coChemKhong = false;
+        } while(coChemKhong)
+
+        // Xác định 1 số có phải SNT hay không?
+        var n = parseInt(prompt("Nhập n = "));
+        var check = true; 
+        for (i = 2; i < n; i++) {
+            console.log(i);
+            if (n % i == 0) {
+                check = false;
+                break;
+            }
+        }
+        if (check) {
+            console.log(n + " là số nguyên tố");
+        } else {
+            console.log(n + " không phải là số nguyên tố");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Khai báo mảng và khởi tạo giá trị
+        var a = [1,2,3,4,5,6,7];
+        // Thêm các giá trị
+        // a[0] = 1;
+        // a[1] = 2;
+        // a[2] = 3;
+        // a[3] = 4;
+        // a[4] = 5;
+        // Lấy các giá trị trong mảng
+        // console.log(a[0]);
+        // console.log(a[1]);
+        // console.log(a[2]);
+        // console.log(a[3]);
+        // console.log(a[4]);
+        // Truy xuất
+        for (let index = 0; index < a.length; index++) {
+            console.log(a[index]);
+        }
+        // Khai báo
+        // var names = [];
+        // for(let i = 0; i < 5; i++) {
+        //     names[i] = prompt("Nhập tên");
+        // }
+        // console.log(names);
+        // Hiển thị tên vừa nhập
+        // for (let i = 0; i < names.length; i++) {
+        //     console.log(names[i]);
+        // }
+
+
+        // Mảng nhiều chiều
+        var numbers = [];
+        numbers[0] = [1,2,3];
+        numbers[1] = [4,5,6];
+        numbers[2] = [7,8,9];
+
+        console.log(numbers);
+
+        // duyệt mảng đa chiều
+        for (let i = 0; i < numbers.length; i++) {
+            let r = '';
+            for (let j = 0; j < numbers[i].length; j++) {
+                r += numbers[i][j] + " ";
+            }
+            console.log(r);
+        }
+    </script>
+</body>
+</html>
