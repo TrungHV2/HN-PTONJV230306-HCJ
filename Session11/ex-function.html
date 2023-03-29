@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var names = ['Hương', 'Đức', 'Hương', 'Thành'];
+        function findArray(arr, key) {
+            let search = [];
+            for(let item of arr) {
+                if (item === key) {
+                    search[search.length] = item;
+                }
+            }
+            return search;
+        }
+
+        var numbers = [1,2,3,4,5,6,3,4,2,2,1];
+        console.log(findArray(numbers, 2));
+        console.log(findArray(names, 'Hương'));
+
+
+
+        /*
+        Khai báo mảng lưu tên danh sách các bạn trong lớp.
+        Tên nhập từ bàn phím. Nhập kết thúc khi người dùng nhất Cancel
+        trên pop-up promt().
+        Tìm tên những bạn có vần "ng" trong tên, không phân biệt chữ hoa thường
+        */
+
+
+        // Khai báo mảng
+        var sinhViens = []
+        // Dùng vòng lặp nhập tên
+        var flag = true;
+        while (flag) {
+            let name = prompt("Nhập tên sinh viên");
+            if (name != null) {
+                sinhViens.push(name);
+            } else {
+                flag = false;
+            }
+        }
+
+        console.log(sinhViens);
+        // Duyệt mảng tìm các tên phù hợp với tên vừa nhập
+        // Cách tìm từ có chứa trong chuỗi hay không 
+        // "chuỗi".indexOf("key") -> tìm thấy trả về index key cần tìm.
+        // ngược lại trả về -1. 
+        // Dùng toLocaleLowerCase() để chuyển tên về chữ thường sau đó tìm kiếm
+        for(let item of sinhViens) {
+            //VD về indexOf(), toLocaleLowerCase()
+            "Chuỗi"
+            .toLocaleLowerCase() // => chuỗi
+            .indexOf('ch'); // => 0
+            if (item.toLocaleLowerCase().indexOf('ng') >= 0) {
+                console.log(item);
+            }
+        }
+        /* Dùng vòng lặp và câu lệnh điều kiện in ra màn hình console
+        3 tam giác như sau (không liên quan mảng):
+
+
+        *
+        * *
+        * * *
+        * * * *
+        * * * * *
+        * * * * * *
+        
+
+        * * * * * *
+        * * * * *
+        * * * *
+        * * *
+        * *
+        * 
+
+             *
+            * *
+           * * *
+          * * * *
+         * * * * *
+        * * * * * *
+        
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arrInt = [];
+        //a. Nhập giá trị các phần tử của mảng từ bàn phím
+        for (let i = 0; i < 3; i++) {
+            arrInt[i] = [];
+            for (let j = 0; j < 3; j++) {
+                arrInt[i][j] = prompt(`Nhập giá trị của phần tử ở hàng ${i}, cột ${j}:`);
+            }
+        }
+    
+        var newArr = [];
+        newArr["name"] = "TrungHV";
+        newArr["age"] = "28";
+        newArr["email"] = "trunghv@gmail.com";
+        console.log(newArr);
+    
+        //b. In giá trị các phần tử của mảng
+        console.log("Các phần tử của mảng là: ");
+        for (let a in arrInt) {
+            for (let v of arrInt[a]) {
+
+            }
+        }
+        for (let a of arrInt) {
+            for (let v of a) {
+
+            }
+        }
+        // for (let i = 0; i < numbers.length; i++) {
+        //         let r = ''; //let dùng để khai báo biến cục bộ (khác với var là khai báo biến toàn cục). Biến cục bộ chỉ có tác dụng trong phạm vi dấu {}. Khuyên dùng let để không làm ảnh hưởng tới các biến khác trong file lớn.
+        //         for (let j = 0; j < numbers[i].length; j++) {
+        //             r += numbers[i][j] + " ";
+        //         }
+        //         console.log(r);
+        //     }
+    
+    
+        //c. In giá trị các phần tử nằm trên đường biên (Coi mảng 2 chiều là ma trận)
+        console.log("Các phần tử nằm trên đường biên là:");
+        for (let i = 0; i < arrInt.length; i++) {
+        for (let j = 0; j < arrInt[i].length; j++) {
+            if (i === 0 || i === arrInt.length - 1 || j === 0 || j === arrInt[i].length - 1) {
+            console.log(arrInt[i][j]);
+            }
+        }
+        }
+    
+        //d. In giá trị các phần tử nằm trên đường chéo chính và phụ
+        // In giá trị các phần tử nằm trên đường chéo chính
+        console.log("Các phần tử nằm trên đường chéo chính là: ");
+        for (let i = 0; i < 3; i++) {
+        console.log(arrInt[i][i]);
+        }
+    
+        // In giá trị các phần tử nằm trên đường chéo phụ
+        console.log("Các phần tử nằm trên đường chéo phụ là: ");
+        for (let i = 0; i < 3; i++) {
+        console.log(arrInt[i][2-i]);
+        }
+    
+        //e. Sắp xếp mảng tăng dần theo dòng (không sử dụng hàm sort())
+        //logic:
+        //1. Xử lý lần lượt từng hàng
+        //2. Trong từng hàng, chọn 1 phần tử làm phần tử so sánh (ở đây là arrInt[i][k] tại vị trí k = j+1)
+        //3. Nếu phần tử arrInt[i][j] > arrInt[i][k] thì hoán đổi vị trí
+        //4. Dùng biến temp để làm nơi lưu tạm thời giá trị cần hoán đổi
+        for (let i = 0; i < 3; i++) {
+        // Duyệt các phần tử trong từng dòng của mảng
+            for (let j = 0; j < 2; j++) {
+                for (let k = j + 1; k < 3; k++) {
+                // Nếu phần tử thứ j lớn hơn phần tử thứ k, hoán đổi chúng
+                if (arrInt[i][j] > arrInt[i][k]) {
+                    let temp = arrInt[i][j];
+                    arrInt[i][j] = arrInt[i][k];
+                    arrInt[i][k] = temp;
+                }
+                }
+            }
+        }
+        console.log("Mảng sau khi sắp xếp tăng dần theo dòng:");
+        console.log(arrInt);
+        //Để xem được mảng đã sắp xếp, cần click vào dấu mũi tên bên trái của "Array(3)" trong console. Nếu mảng có nhiều phần tử hơn thì nó sẽ được hiển thị dưới dạng danh sách, còn với mảng hiện tại thì nó chỉ có 3 phần tử nên được hiển thị đơn giản là "Array(3)". Có thể click vào đó để xem danh sách các phần tử của mảng đã được sắp xếp.
+        </script>
+</body>
+</html>

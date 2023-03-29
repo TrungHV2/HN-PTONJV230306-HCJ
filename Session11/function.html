@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Định nghĩa hàm/phương thức
+        //Hàm xinChao có 1 tham số "ten"
+        function xinChao(ten = "JavaScript") {
+            // Các câu lệnh của hàm
+            console.log("Xin chào các bạn!");
+            console.log("Tên tôi là " + ten);
+        }
+        const PI = 3.14;
+        var name = "TrungHV"
+        // Arrow function
+        const hello = () => {
+            let name = "Trong hàm";
+            console.log(name + " Hello Wordl!");
+        }
+        hello();
+        console.log(name);
+        // Gọi hàm, khi này các câu lệnh trong hàm mới được thực thi
+        xinChao("Trunghv");
+        xinChao("Nam");
+        xinChao();
+        // Đinh nghĩa hàm có kiểu trả về
+        function tinhTong(a, b) {
+            return a + b;
+        }
+        function tinhHieu(a, b) {
+            return a - b;
+        }
+        var tong = tinhTong(5, 7);
+        console.log(tong);
+    </script>
+</body>
+</html>
