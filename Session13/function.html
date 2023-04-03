@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // C1
+        function hello() {
+            console.log("Xin chào các bạn!");
+        }
+        hello();
+        // C2
+        var fnc_expression = function() {
+            console.log("Function expression");
+        }
+        fnc_expression();
+        // C3
+        (function(param) {
+            console.log("IIFE " + param);
+        })("Đối số")
+        // C4: Arrow function
+        var arrow_func = () => console.log("Arrow function");
+        arrow_func();
+        // Hàm truyền tham trị
+        var increNumber = (num) => {
+            num += 10;
+            console.log(num);
+        }
+        var a = 5;
+        increNumber(a);
+        console.log("Sau khi hàm thực thi a = " + a);
+        // Hàm truyền tham chiếu
+        var passReferenceFunc = (arr) => {
+            arr[0] += 10;
+            console.log(arr[0]);
+        }
+        var numbers = [];
+        numbers[0] = 16;
+        passReferenceFunc(numbers);
+        console.log("Sau khi hàm thực thi numbers[0] = " + numbers[0]);
+
+
+        var checkNumber = function(number, callbackFnc) {
+            // Xử lý nhiều hơn ở đây trong thực tế
+            callbackFnc(number);
+        }
+        function funcArg(number) {
+            if (number % 2 == 0)
+                console.log(number + " là số chẵn");
+            else
+                console.log(number + " là số lẻ");
+        }
+        function funcArg1(number) {
+            if (number >= 0)
+                console.log(number + " là số dương");
+            else
+                console.log(number + " là số âm");
+        }
+        checkNumber(5, funcArg);
+        checkNumber(5, funcArg1);
+
+        var sortArrayNumber = function(arr, callbackFnc) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (callbackFnc(arr[i], arr[j])) {
+                    // if (arr[i] > arr[j]) {
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+        }
+
+        var newNumbers = [1,4,8,2,4,7,4,2,7,78,33,0];
+        sortArrayNumber(newNumbers, (ai, aj) => {
+            if (ai > aj)
+                return true;
+            else
+                return false;
+        });
+        console.log(newNumbers);
+        sortArrayNumber(newNumbers, (n1, n2) => n1 < n2);
+        console.log(newNumbers);
+
+        // Định nghĩa hàm tìm kiếm trong mảng bất kỳ theo điều kiện bất kỳ.
+        var searchArray = function(arr, callbackFunc) {
+            let result = [];
+            for (let item of arr) {
+                if (callbackFunc(item)) {
+                    result.push(item);
+                }
+            }
+            return result;
+        }
+        var names = ["Đức", "Hương", "Thắng", "Tâm", "Mỹ"];
+        var searchByName = searchArray(names, (item) => {
+            return item == "Tâm";
+        })
+        console.log(searchByName);
+        console.log(searchArray(names, n => n.indexOf("ng") >= 0));
+        console.log(searchArray(names, function(item) {
+            return item.length > 3;
+        }));
+        console.log(searchArray(names, function(item) {
+            return item.length <= 3;
+        }));
+        console.log(searchArray( names, (item) => item.length <= 3 ));
+
+        var changeArray = function(arr, callbackFunc) {
+            for (let i in arr) {
+                arr[i] = callbackFunc(arr[i]);
+            }
+        }
+        changeArray(names, name => name + "AAA");
+        changeArray(names, function(name) {
+            return "AAA" + name
+        });
+        console.log(names);
+    </script>
+</body>
+</html>
