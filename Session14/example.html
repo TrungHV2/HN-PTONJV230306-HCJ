@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="pass">
+    <button id="btnShowPass">Hiện</button>
+    <script>
+        // Tìm phần từ muốn tương tác
+        var ip = document.getElementById('pass');
+        var btn = document.getElementById('btnShowPass');
+        // Xử lý sự kiện click
+        btn.onclick = () => {
+            // Lấy giá trị thuộc tính type hiện tại của input
+            let ipType = ip.getAttribute('type');
+            // Kiểm tra xem nếu type đang là password => cần hiện
+            if (ipType === 'password') { // Hiện
+                ip.setAttribute('type', 'text');
+                btn.innerText = 'Ẩn';
+            } else { // = > Ẩn
+                ip.setAttribute('type', 'password');
+                btn.innerText = 'Hiện';
+            }
+        }
+    </script>
+</body>
+</html>

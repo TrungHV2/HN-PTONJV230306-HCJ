@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="txt">JavaScript</h1>
+    <h1 class="txt">GetByTagName</h1>
+    <div id="list" style="border: 2px solid #000;">
+        <input type="text" id="replace">
+    </div>
+    <input id="pass" type="password" value="Abc@123456">
+    <script>
+        // Tìm các phần tử HTML
+        var h1 = document.getElementById("title");
+        var byTagName = document.getElementsByTagName('h1');
+        var byClassName = document.getElementsByClassName('txt');
+
+        var querySelector = document.querySelector('.txt');
+        var querySelectorAll = document.querySelectorAll('#title');
+        h1.innerText = "JavaScript DOM";
+        console.log(h1.id);
+        console.log(h1);
+        console.log(byTagName);
+        console.log(byClassName);
+        console.log(querySelector);
+        console.log(querySelectorAll);
+
+        // Thay đổi thuộc tính, truy xuất thông tin
+        var text = "Danh sách text";
+        var _list = document.getElementById('list');
+        _list.innerHTML = `
+            <ul>
+                <li>${text}</li>
+                <li>${text}</li>
+                <li>Danh sách 3</li>
+            </ul>
+        `;
+        _list.style.borderColor = 'red';
+        _list.style.borderWidth = '10px';
+        console.log(_list.style.borderStyle);
+        console.log(_list.style.borderColor);
+        var pass = document.getElementById('pass');
+        pass.setAttribute('type', 'text');
+
+        // Thêm, xóa phần tử HTML
+        var btn = document.createElement('button');
+        btn.id = "btn";
+        btn.innerText = "Click me";
+        _list.appendChild(btn);
+        //_list.removeChild(btn);
+        _list.replaceChild(document.createElement('input'), btn);
+    </script>
+</body>
+</html>

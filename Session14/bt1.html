@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bài 1 -->
+    <h1>Bài 1</h1>
+    <input type="text" id="fullName">
+    <button id="btnAdd">Thêm</button>
+    <div>
+        <h3>Danh sách sinh viên</h3>
+        <ul id="list"></ul>
+    </div>
+
+    <!-- Bài 2 -->
+    <h1>Bài 2</h1>
+    <div id="wrap" style="width: 350px; height: 350px;border: 1px solid red"></div>
+    <p><input id="borderWidth" type="text" placeholder="Độ rộng đường viền"></p>
+    <p><input id="borderStyle" type="text" placeholder="Kiểu đường viền"></p>
+    <p><input id="borderColor" type="text" placeholder="Màu đường viền"></p>
+    <script>
+        // BÀI 1
+        // Viết javascipt xử lý sau khi nhập tên sinh viên vào input#fullName (không được bỏ trống) và bấm nút button#btnAdd, thực hiện thêm mới 1 phần tử <li> vào ul#list với nội dung là tên sinh viên vừa nhập ở input
+        var btn = document.getElementById('btnAdd');
+        var fName = document.getElementById('fullName');
+        var list = document.getElementById('list');
+
+        btn.onclick = function() {
+            let txtName = fName.value.trim();
+            if (txtName != '') {
+                let li = document.createElement('li');
+                li.innerText = txtName;
+                list.appendChild(li);
+            }
+        }
+            
+        // BÀI 2
+        // Viết javascript sao cho sau khi nhập giá trị ở các ô input (borderWidth, borderStyle, borderColor) sẽ thay đổi thuộc tính css tương ứng ở div#wrap
+    </script>
+</body>
+</html>
