@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="numberA" placeholder="Số a = ?"><br>
+        <input type="text"  id="numberB" placeholder="Số b = ?"><br>
+        <button id="btn">=</button><br>
+        <input type="text" id="result" placeholder="Kết quả...">
+    </div>
+    <script>
+        /*
+        Viết chương trình gồm 3 ô input cho phép tính tổng giá trị nhập vào ở 2 ô input và in ra tổng ở ô input thứ 3 bằng 3 cách khác nhau
+        */
+
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', function(evt) {
+            console.log(evt);
+            // Lấy giá trị ở 2input về
+            let a = parseFloat(document.getElementById('numberA').value);
+            let b = parseFloat(document.getElementById('numberB').value);
+
+            document.getElementById('result').value = a + b;
+        })
+    </script>
+</body>
+</html>

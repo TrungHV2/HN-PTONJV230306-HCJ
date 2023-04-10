@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Bây giờ là</h2>
+    <div id="show_time"></div>
+    <audio id="music" src="media/LaAnh-PhamLichBMZ-8811329.mp3" controls="controls"></audio>
+    </div>
+    <script>
+        let show = document.getElementById('show_time');
+        let music = document.getElementById('music');
+        let listMusics = ['media/LaAnh-PhamLichBMZ-8811329.mp3'];
+
+        // Hiển thị đồng hồ
+        let showTime = setInterval(function() {
+            let now = new Date();
+            show.innerHTML = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+        }, 1000);
+
+        // Chạy nhạc
+        let playMusic = setInterval(function() {
+            // Chuyển bài hát, đọc đường dẫn nhạc từ mảng listMusics
+
+            // Chạy bài hát
+            music.play();
+        }, 5 * 60 * 1000)
+
+        // Đổi ảnh nền
+        //document.getElementById('').style.backgroundImage = 'url()';
+    </script>
+</body>
+</html>

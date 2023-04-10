@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Student Management</h2>
+        <p><b>StudentId</b><input type="text" id="txtId"></p>
+        <p><b>StudentName</b><input type="text" id="txtName"></p>
+        <p><b>Age</b><input type="text" id="txtAge"></p>
+        <p><b>Phone</b><input type="text" id="txtPhone"></p>
+        <p><b>Email</b><input type="text" id="txtEmail"></p>
+        <p><button id="btn">Create</button></p>
+    </div>
+    <div>
+        <h2>Student list</h2>
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="list">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Lấy các đối HTML cần tương tác
+        let btn = document.getElementById('btn');
+
+        let txtId = document.getElementById('txtId');
+        let txtName = document.getElementById('txtName');
+        let txtAge = document.getElementById('txtAge');
+        let txtPhone = document.getElementById('txtPhone');
+        let txtEmail = document.getElementById('txtEmail');
+
+        let list = document.getElementById('list');
+        
+        // Xử lý sự kiện
+        btn.onclick = function(evt) {
+            if (txtId.value.length != 6) {
+                alert('Mã sinh viên phải có 6 ký tự');
+                return;
+            }
+            if (txtName.value == '') {
+                alert('Vui lòng nhập tên sinh viên')
+                return;
+            }
+            if (txtAge.value == '' || parseInt(txtAge.value) < 18) {
+                alert('Tuổi phải lớn hơn hoặc bằng 18');
+                return;
+            }
+            // 0962229893
+            // 0378234898
+            // 0834958435
+
+            let regexPhone = /^0[938]{1}\d{8}$/;
+            let regexEmail = /^[\w\.]+@[\w\-\.]+\.[a-z]{2,4}$/;
+            if (txtPhone.value == '' || !regexPhone.test(txtPhone.value)) {
+                alert('Số điện thoại sai định dạng!');
+                return;
+            }
+            if (txtEmail.value == '' || !regexEmail.test(txtEmail.value)) {
+                alert('Email sai định dạng!');
+                return;
+            }
+            // Dữ liệu hợp lệ
+            // Thêm dữ liệu hiển thị vào bảng
+            let row = `<tr>
+                            <td>${txtId.value}</td>
+                            <td>${txtName.value}</td>
+                            <td>${txtAge.value}</td>
+                            <td>${txtPhone.value}</td>
+                            <td>${txtEmail.value}</td>
+                        </tr>`;
+            list.innerHTML = list.innerHTML + row;
+        }
+    </script>
+</body>
+</html>
