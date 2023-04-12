@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><b>Tài khoản</b> <input type="text" id="username"></p>
+    <p><b>Mật khẩu</b> <input type="password" id="password"></p>
+    <button id="login">Đăng nhập</button>
+    <button id="register">Đăng ký</button>
+    <script>
+        /*
+        Thêm tính năng đăng ký user. User là một đối tượng gồm username, password, email, phone. Sau khi đăng ký thành công sẽ lưu danh sách user vào localStorage.
+        Lúc đăng nhập sẽ kiểm tra thông tin username, password từ trong danh sách các đối tượng user đã đăng ký lưu ở localStorage
+        */
+        let login = document.getElementById('login');
+        let username = document.getElementById('username');
+        let password = document.getElementById('password');
+
+        login.onclick = () => {
+            if (username.value == "admin" && password.value == "1234") {
+                // Lưu session nếu đăng nhập thành công
+                sessionStorage.setItem('username', username.value);
+                window.location.href = 'home.html';
+            } else {
+                alert('Sai tài khoản mật khẩu!');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Định nghĩa lớp Sinh viên
+        function SinhVien(id, name, email) {
+            // Định nghĩa các thuộc tính
+            this.id = id;
+            this.name = name;
+            this.email = email;
+            // Định nghĩa phương thức (hành vi của đối tượng)
+            this.xinChao = function() {
+                console.log(`Xin chào! Tôi tên là ${this.name}`);
+            }
+        }
+
+        // Bổ sung phương thức cho class đã định nghĩa
+        SinhVien.prototype.display = function() {
+            console.log(this.id);
+            console.log(this.name);
+            console.log(this.email);
+        }
+
+        // Khởi tạo đối tượng
+        var sv = new SinhVien('SV01', 'Đức', 'duc@gmail.com');
+        var sv2 = new SinhVien('SV02', 'Tâm', 'tam@gmail.com');
+        sv.id = 'SV03'; // gán giá trị cho thuộc tính của đối tượng
+        console.log(sv.id); // lấy giá trị trong thuộc tính của đối tượng
+
+        // Gọi các phương thức của đối tượng
+        sv.xinChao();
+        sv2.xinChao();
+        sv2.display();
+
+        var subject = {
+            id: 'HCJ',
+            name: 'Thiết kế giao diện web',
+            show: function() {
+                console.log(this.name);
+            }
+        };
+
+        console.log(subject.id);
+        subject.show();
+
+        var obj = new Object();
+
+        obj.title = 'Tài liệu hướng dẫn HTML';
+        obj.price = 45000;
+
+        obj.show = function() {
+            console.log(this.title);
+        }
+        obj.show();
+        console.log(obj.price);
+
+
+        class Person {
+            constructor(id, name, phone) {
+                // Các thuộc tính
+                this.id = id;
+                this.name = name;
+                this.phone = phone;
+            }
+            // Phương thức
+            display() {
+                console.log(this.id);
+                console.log(this.name);
+                console.log(this.phone);
+            }
+        }
+
+        var p = new Person('P001', 'Thắng', '0987654321');
+        p.display();
+    </script>
+</body>
+</html>
