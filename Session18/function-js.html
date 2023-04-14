@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr.active td {
+            background-color: #06c;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table border="1" width="100%">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <tr class="active">
+                <td>SV01</td>
+                <td>Nam</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>SV01</td>
+                <td>Nam</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>SV01</td>
+                <td>Nam</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>SV01</td>
+                <td>Nam</td>
+                <td>20</td>
+            </tr>
+        </table>
+    </div>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        $('td').click(function() {
+            console.log($(this).parent());
+            $(this).parent().addClass('active');
+            $(this).parent().siblings().removeClass('active');
+        })
+    </script>
+</body>
+</html>
