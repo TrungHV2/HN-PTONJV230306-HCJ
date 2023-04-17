@@ -1,0 +1,16 @@
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+.owl-custom {
+  position: relative;
+}
+.owl-custom .owl-nav {
+  position: absolute;
+  top: -55px;
+  right: 0px;
+}
+.owl-custom .owl-dots {
+  margin-top: 15px;
+}
