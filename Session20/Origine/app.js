@@ -4,21 +4,23 @@ function loadProduct() {
     let item = '';
     for (let p of listProducts.filter(p => p.status)) {
         item += `<div class="item">
-                    <a href="#">
-                        <div class="item-img">
-                            <img src="${p.images}" alt="">
-                        </div>
-                        <span class="item-sale">Sale !</span>
+                    <div class="product-wrap">
+                        <a href="#">
+                            <div class="item-img">
+                                <img src="${p.images}" alt="">
+                            </div>
+                            <span class="item-sale">Sale !</span>
 
 
-                        <span class="item-heart">
-                            <i class="fa fa-heart-o head-icon" aria-hidden="true"> </i>
-                        </span>
+                            <span class="item-heart">
+                                <i class="fa fa-heart-o head-icon" aria-hidden="true"> </i>
+                            </span>
 
-                        <div class="price">${p.price}</div>
-                        <div class="name">${p.name}</div>
-                        <div><button class="btn-buy" onclick="buy(event, '${p.id}')">Mua</button></div>
-                    </a>
+                            <div class="price">${p.price}</div>
+                            <div class="name">${p.name}</div>
+                            <div class="wrap-btn"><button class="btn-buy" onclick="buy(event, '${p.id}')">Mua</button></div>
+                        </a>
+                    </div>
                 </div>`
     }
     $('.list-product').html(item);
